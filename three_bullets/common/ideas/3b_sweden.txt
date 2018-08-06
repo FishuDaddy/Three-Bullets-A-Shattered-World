@@ -1,0 +1,205 @@
+ideas = {
+
+	country = {
+		tb_sweden_economic_crisis_tooltip = {
+
+			picture = great_depression
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.4
+				political_power_factor = -0.25
+				conscription_factor = -0.4
+			}
+		}
+	}
+
+	country = {
+		tb_sweden_economic_crisis_1 = {
+
+			picture = great_depression
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.4
+			}
+		}
+	}
+	country = {
+		tb_sweden_economic_crisis_2 = {
+
+			picture = great_depression
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.3
+			}
+		}
+	}
+	country = {
+		tb_sweden_economic_crisis_3 = {
+
+			picture = great_depression
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+	}
+	country = {
+		tb_sweden_economic_crisis_4 = {
+
+			picture = great_depression
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+	}
+
+	country = {
+		tb_sweden_political_crisis_1 = {
+
+			picture = great_depression
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.25
+			}
+		}
+	}
+
+	country = {
+		tb_sweden_political_crisis_2 = {
+
+			picture = great_depression
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.15
+			}
+		}
+	}
+
+	country = {
+		tb_sweden_political_crisis_3 = {
+
+			picture = great_depression
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.05
+			}
+		}
+	}
+
+	country = {
+		tb_sweden_draft_crisis_1 = {
+
+			picture = great_depression
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.4
+			}
+		}
+	}
+
+	country = {
+		tb_sweden_draft_crisis_2 = {
+
+			picture = great_depression
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.25
+			}
+		}
+	}
+
+	country = {
+		tb_sweden_draft_crisis_3 = {
+
+			picture = great_depression
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.10
+			}
+		}
+	}
+
+	country = {
+		tb_sweden_draft_crisis_4 = {
+
+			picture = great_depression
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.05
+			}
+		}
+	}
+}
