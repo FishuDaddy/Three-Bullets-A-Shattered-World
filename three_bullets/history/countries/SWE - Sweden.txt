@@ -1,11 +1,13 @@
-﻿capital = 141	
+capital = 141	
 
 oob = "SWE_1936"
 
 set_research_slots = 3
 
 add_ideas = {
-	en_svensk_tiger
+	tb_sweden_economic_crisis_1
+	tb_sweden_political_crisis_1
+	tb_sweden_draft_crisis_1
 	neutrality_idea
 }
 set_stability = 0.9
