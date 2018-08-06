@@ -1,0 +1,488 @@
+focus_tree = {
+	id = swedish_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 100
+			tag = SWE
+		}
+	}
+	
+	default = no
+	
+	
+	focus = { #Political Effort
+		id = SWE_political
+		icon = GFX_goal_generic_military_sphere
+		x = 14
+		y = 0
+		cost = 10
+		
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = { #No More Neutrality
+		id = SWE_no_neutrality
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = SWE_political }
+		x = 4
+		y = 1
+		relative_position_id = SWE_political
+		cost = 10
+		
+		completion_reward = {
+			remove_ideas = {
+				neutrality_idea
+			}
+		}
+	}
+
+	focus = { #A Strong King
+		id = SWE_strong_king
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_no_neutrality
+		prerequisite = { focus = SWE_no_neutrality }
+		x = -4
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Levianthist Symphasies
+		id = SWE_levianthist
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_strong_king
+		prerequisite = { focus = SWE_strong_king }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Idolize Caroleans
+		id = SWE_idolize_caroleans
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_levianthist
+		prerequisite = { focus = SWE_levianthist }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Idolize Caroleans
+		id = SWE_for_rikets_val
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_idolize_caroleans
+		prerequisite = { focus = SWE_idolize_caroleans }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Increase Authority
+		id = SWE_increase_authority
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_levianthist
+		prerequisite = { focus = SWE_levianthist }
+		x = -2
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+	
+
+	focus = { #Norway Question
+		id = SWE_norway_question
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_increase_authority
+		prerequisite = { focus = SWE_increase_authority }
+		x = -2
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Revise Treaty of Kiel
+		id = SWE_revise_treaty_of_kiel
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_norway_question
+		prerequisite = { focus = SWE_norway_question }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #One Country Solution
+		id = SWE_one_country
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_revise_treaty_of_kiel
+		prerequisite = { focus = SWE_revise_treaty_of_kiel }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Crush the Resistance
+		id = SWE_crush_resistance
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_one_country
+		prerequisite = { focus = SWE_one_country }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+
+
+
+	focus = { #Announce New Heir
+		id = SWE_announce_new_heir
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_increase_authority
+		prerequisite = { focus = SWE_increase_authority }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Imperial Ambition
+		id = SWE_imperial_ambitions
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_announce_new_heir
+		prerequisite = { focus = SWE_announce_new_heir }
+		prerequisite = { focus = SWE_for_rikets_val }
+		mutually_exclusive = { focus = SWE_invite_finland }
+		x = 2
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #End the Tsar
+		id = SWE_end_tsar
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_imperial_ambitions
+		prerequisite = { focus = SWE_imperial_ambitions }
+		mutually_exclusive = { focus = SWE_protect_tsar }
+		x = -2
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Greater Threat
+		id = SWE_greater_threat
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_end_tsar
+		prerequisite = { focus = SWE_end_tsar }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Protect Tsar
+		id = SWE_protect_tsar
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_imperial_ambitions
+		prerequisite = { focus = SWE_imperial_ambitions }
+		mutually_exclusive = { focus = SWE_end_tsar }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Press the Tsars Claims
+		id = SWE_press_tsar_claims
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_protect_tsar
+		prerequisite = { focus = SWE_protect_tsar }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Reclaim Finland
+		id = SWE_reclaim_finland
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_imperial_ambitions
+		prerequisite = { focus = SWE_imperial_ambitions }
+		x = 2
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Ultimatum for the gulf
+		id = SWE_gulf_ultimatum
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_reclaim_finland
+		prerequisite = { focus = SWE_reclaim_finland }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Integrate the Gulf
+		id = SWE_gulf_integrate
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_gulf_ultimatum
+		prerequisite = { focus = SWE_gulf_ultimatum }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Reclaim Former Territories
+		id = SWE_demmand_finalnd
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_gulf_integrate
+		prerequisite = { focus = SWE_gulf_integrate }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Triumph in Finland
+		id = SWE_triumph_finland
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_demmand_finalnd
+		prerequisite = { focus = SWE_demmand_finalnd }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+
+	focus = { #Claim Livonia
+		id = SWE_claim_livonia
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_imperial_ambitions
+		prerequisite = { focus = SWE_imperial_ambitions }
+		mutually_exclusive = { focus = SWE_invite_livonia focus = SWE_guarantee_livonia }
+		x = 4
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Strike at Livonia
+		id = SWE_attack_livonia
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_claim_livonia
+		prerequisite = { focus = SWE_claim_livonia }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+
+
+
+	focus = { #Sweden First
+		id = SWE_sweden_first
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_levianthist
+		prerequisite = { focus = SWE_levianthist }
+		x = 6
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Reduce exports
+		id = SWE_reduce_exports
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_sweden_first
+		prerequisite = { focus = SWE_sweden_first }
+		x = 2
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Northern Alliance
+		id = SWE_northern_alliance
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_sweden_first
+		prerequisite = { focus = SWE_sweden_first }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Sweden First
+		id = SWE_invite_finland
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_northern_alliance
+		prerequisite = { focus = SWE_northern_alliance }
+		mutually_exclusive = { focus = SWE_imperial_ambitions }
+		x = -2
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Influence Livonia
+		id = SWE_influence_livonia
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_northern_alliance
+		prerequisite = { focus = SWE_northern_alliance }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Invite Livonia
+		id = SWE_invite_livonia
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_influence_livonia
+		prerequisite = { focus = SWE_influence_livonia }
+		mutually_exclusive = { focus = SWE_claim_livonia focus = SWE_guarantee_livonia }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Guarantee Livonia
+		id = SWE_guarantee_livonia
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_northern_alliance
+		prerequisite = { focus = SWE_northern_alliance }
+		mutually_exclusive = { focus = SWE_invite_livonia focus = SWE_claim_livonia }
+		x = 2
+		y = 2
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Support Livonian Claim on Baltics
+		id = SWE_support_livonian_claim
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_invite_livonia
+		prerequisite = { focus = SWE_invite_livonia focus = SWE_guarantee_livonia }
+		x = 1
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Influence Denmark
+		id = SWE_influence_denmark
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_northern_alliance
+		prerequisite = { focus = SWE_northern_alliance }
+		x = 4
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Invite Denmark
+		id = SWE_invite_denmark
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_influence_denmark
+		prerequisite = { focus = SWE_influence_denmark }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+
+	focus = { #Support Danish Claim
+		id = SWE_support_danish_claim
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_invite_denmark
+		prerequisite = { focus = SWE_invite_denmark }
+		x = 0
+		y = 1
+		cost = 10
+		
+		completion_reward = {
+		}
+	}
+}
