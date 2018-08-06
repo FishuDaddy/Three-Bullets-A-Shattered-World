@@ -13,44 +13,224 @@ focus_tree = {
 	default = no
 	
 	
-	focus = { #Political Effort
-		id = SWE_political
+	focus = { #Economic Crisis 1
+		id = SWE_economic_crisis_1
 		icon = GFX_goal_generic_military_sphere
 		x = 14
 		y = 0
 		cost = 10
+
+		available = {
+			has_idea = tb_sweden_economic_crisis_1
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = tb_sweden_economic_crisis_1
+				add_idea = tb_sweden_economic_crisis_2
+			}
+		}
+	}
+
+	focus = { #Economic Crisis 2
+		id = SWE_economic_crisis_2
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = SWE_economic_crisis_1 }
+		relative_position_id = SWE_economic_crisis_1
+
+		available = {
+			has_idea = tb_sweden_economic_crisis_2
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = tb_sweden_economic_crisis_2
+				add_idea = tb_sweden_economic_crisis_3
+			}
+		}
+	}
+
+	focus = { #Economic Crisis 3
+		id = SWE_economic_crisis_3
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = SWE_economic_crisis_2 }
+		relative_position_id = SWE_economic_crisis_2
+
+		available = {
+			has_idea = tb_sweden_economic_crisis_3
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = tb_sweden_economic_crisis_3
+				add_idea = tb_sweden_economic_crisis_4
+			}
+		}
+	}
+
+	focus = { #Economic Crisis 4
+		id = SWE_economic_crisis_4
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = SWE_economic_crisis_3 }
+		relative_position_id = SWE_economic_crisis_3
+
+		available = {
+			has_idea = tb_sweden_economic_crisis_4
+		}
+		
+		completion_reward = {
+			remove_ideas = {
+				tb_sweden_economic_crisis_4
+			}
+		}
+	}
+
+
+	focus = { #Political Crisis 1
+		id = SWE_political_crisis_1
+		icon = GFX_goal_generic_military_sphere
+		x = 12
+		y = 1
+		cost = 10
+		prerequisite = { focus = SWE_economic_crisis_1 }
+		relative_position_id = SWE_economic_crisis_1
+
+		available = {
+			has_idea = tb_sweden_political_crisis_1
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = tb_sweden_political_crisis_1
+				add_idea = tb_sweden_political_crisis_2
+			}
+		}
+	}
+
+	focus = { #Political Crisis 2
+		id = SWE_political_crisis_2
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = SWE_political_crisis_1 }
+		relative_position_id = SWE_political_crisis_1
+
+		available = {
+			has_idea = tb_sweden_political_crisis_2
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = tb_sweden_political_crisis_2
+				add_idea = tb_sweden_political_crisis_3
+			}
+		}
+	}
+
+
+	focus = { #Draft Crisis 1
+		id = SWE_draft_crisis_1
+		icon = GFX_goal_generic_military_sphere
+		x = -12
+		y = 1
+		cost = 10
+		prerequisite = { focus = SWE_economic_crisis_1 }
+		relative_position_id = SWE_economic_crisis_1
+
+		available = {
+			has_idea = tb_sweden_draft_crisis_1
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = tb_sweden_draft_crisis_1
+				add_idea = tb_sweden_draft_crisis_2
+			}
+		}
+	}
+
+	focus = { #Draft Crisis 2
+		id = SWE_draft_crisis_2
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = SWE_draft_crisis_1 }
+		relative_position_id = SWE_draft_crisis_1
+
+		available = {
+			has_idea = tb_sweden_draft_crisis_1
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = tb_sweden_draft_crisis_2
+				add_idea = tb_sweden_draft_crisis_3
+			}
+		}
+	}
+
+	focus = { #Draft Crisis 3
+		id = SWE_draft_crisis_3
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = SWE_draft_crisis_2 }
+		relative_position_id = SWE_draft_crisis_2
+
+		available = {
+			has_idea = tb_sweden_draft_crisis_3
+		}
+		
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = tb_sweden_draft_crisis_3
+				add_idea = tb_sweden_draft_crisis_4
+			}
+		}
+	}
+
+
+
+	focus = { #Political Effort
+		id = SWE_political
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = SWE_political_crisis_2 }
+		relative_position_id = SWE_political_crisis_2
 		
 		completion_reward = {
 			add_political_power = 120
 		}
 	}
 
-	focus = { #No More Neutrality
-		id = SWE_no_neutrality
-		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = SWE_political }
-		x = 4
-		y = 1
-		relative_position_id = SWE_political
-		cost = 10
-		
-		completion_reward = {
-			remove_ideas = {
-				neutrality_idea
-			}
-		}
-	}
 
 	focus = { #A Strong King
 		id = SWE_strong_king
 		icon = GFX_goal_generic_military_sphere
-		relative_position_id = SWE_no_neutrality
-		prerequisite = { focus = SWE_no_neutrality }
+		relative_position_id = SWE_political
+		prerequisite = { focus = SWE_political }
 		x = -4
 		y = 1
 		cost = 10
 		
 		completion_reward = {
+			remove_ideas = {
+				tb_sweden_political_crisis_3
+			}
 		}
 	}
 
@@ -112,6 +292,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		relative_position_id = SWE_increase_authority
 		prerequisite = { focus = SWE_increase_authority }
+		prerequisite = { focus = SWE_develop_railway }
 		x = -2
 		y = 1
 		cost = 10
@@ -485,4 +666,169 @@ focus_tree = {
 		completion_reward = {
 		}
 	}
+
+
+
+
+	focus = { #Develop the Heartland
+		id = SWE_develop_heartland
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_economic_crisis_4
+		prerequisite = { focus = SWE_economic_crisis_4 }
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			AND = {
+				controls_state = 141
+				controls_state = 140
+			}
+			
+		}
+		
+		completion_reward = {
+			141 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+   					type = industrial_complex
+   					level = 1
+   					instant_build = yes
+   				}
+			}
+			140 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+   					type = industrial_complex
+   					level = 1
+   					instant_build = yes
+   				}
+			}
+		}
+	}
+
+		focus = { #Develop Stockholm
+		id = SWE_develop_stockholm
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_develop_heartland
+		prerequisite = { focus = SWE_develop_heartland }
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			controls_state = 141
+		}
+		
+		completion_reward = {
+			141 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+   					type = industrial_complex
+   					level = 2
+   					instant_build = yes
+   				}
+			}
+		}
+	}
+
+	focus = { #Develop Scania
+		id = SWE_develop_stockholm
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_develop_stockholm
+		prerequisite = { focus = SWE_develop_stockholm }
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			controls_state = 138
+		}
+		
+		completion_reward = {
+			138 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+   					type = industrial_complex
+   					level = 2
+   					instant_build = yes
+   				}
+			}
+		}
+	}
+
+	focus = { #Develop Norway
+		id = SWE_develop_norway
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_develop_heartland
+		prerequisite = { focus = SWE_develop_heartland }
+		x = 2
+		y = 1
+		cost = 10
+
+		available = {
+			OR = {
+				NOR = {
+					AND = {
+						controls_state = 110
+						is_subject_of = SWE
+					}
+				}
+				controls_state = 110	
+			}
+		}
+		completion_reward = {
+			110 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+   					type = industrial_complex
+   					level = 2
+   					instant_build = yes
+   				}
+			}
+		}
+	}
+
+	focus = { #Oslo Stockholm Gothenburg railway
+		id = SWE_develop_railway
+		icon = GFX_goal_generic_military_sphere
+		relative_position_id = SWE_develop_norway
+		prerequisite = { focus = SWE_develop_norway }
+		x = 0
+		y = 1
+		cost = 10
+
+		available = {
+			AND = {
+				OR = {
+					NOR = {
+						controls_state = 110
+					}
+					controls_state = 110
+				}
+				controls_state = 140
+				controls_state = 141
+			}
+		}
+		completion_reward = {
+			110 = {
+				set_building_level = {
+   					type = infrastructure
+    				level = 10
+    			}
+    		}
+    		140 = {
+				set_building_level = {
+   					type = infrastructure
+    				level = 10
+    			}
+    		}
+    		141 = {
+				set_building_level = {
+   					type = infrastructure
+    				level = 10
+    			}
+    		}
+    	}
+    }
 }
